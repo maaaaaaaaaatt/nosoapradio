@@ -225,6 +225,8 @@ td:last-child {
   text-align: center;
   margin-bottom: 1%;
   width: 100%;
+  position: sticky;
+  bottom: 0;
 }
 
 /* Mobile Views */
