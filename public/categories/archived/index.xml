@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Archived on NO SOAP, RADIO</title>
+    <link>http://localhost:1313/categories/archived/</link>
+    <description>Recent content in Archived on NO SOAP, RADIO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Feb 2024 14:46:04 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/archived/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>William Major: Pedals and Preachers</title>
+      <link>http://localhost:1313/projects/will/</link>
+      <pubDate>Thu, 29 Feb 2024 14:46:04 -0500</pubDate>
+      <guid>http://localhost:1313/projects/will/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet justo id neque luctus convallis. Proin tristique interdum libero, ac laoreet dolor malesuada et. Sed ornare tristique laoreet. Morbi vel tellus eget elit placerat mollis. Nulla quis augue at orci fermentum porttitor sit amet et tortor. Phasellus vel est nec nisl efficitur euismod a vel neque. Vestibulum vel felis commodo, ultricies felis ut, lacinia orci. Nunc feugiat lobortis ante, faucibus euismod augue suscipit non.</description>
+    </item>
+  </channel>
+</rss>

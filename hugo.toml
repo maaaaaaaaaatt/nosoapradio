@@ -1,0 +1,4 @@
+baseURL = 'https://no-soap.net/'
+languageCode = 'en-us'
+title = 'NO SOAP, RADIO'
+theme = 'nosoapradio-theme'

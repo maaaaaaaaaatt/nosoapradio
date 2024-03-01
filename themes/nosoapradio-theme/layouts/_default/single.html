@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<div class="project-container">
+  <div class="project-info">
+
+    <!-- Project Title -->
+     <div class="card-title">{{ .Title }}<br>{{ .Params.dates }}</div>
+
+     <audio class="card-audio" controls>
+      <source src="{{ with .Params.audio }}{{ . }}{{ end }}" type="audio/ogg">
+      Your browser does not support the audio element.
+   </audio>
+
+   <div class="project-copy">
+      {{ .Content }}
+   </div>
+
+  </div>
+
+  <div class="project-img">
+     <img src="{{ with .Params.image1 }}{{ . }}{{ end }}">
+     <img src="{{ with .Params.image2 }}{{ . }}{{ end }}">
+     <img src="{{ with .Params.image3 }}{{ . }}{{ end }}">
+  </div>
+
+  {{ end }}
