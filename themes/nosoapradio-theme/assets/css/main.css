@@ -1,7 +1,7 @@
 @font-face {
   font-family: GortonRegular;
-  src: local('GortonRegular'),
-  url('/fonts/routed-gothic.ttf') format("truetype");
+  src: local('GortonDigitalRegular'),
+  url('/fonts/GortonDigitalRegular.otf') format("opentype");
 }
 
 html body {
