@@ -1,6 +1,6 @@
 @font-face {
   font-family: GortonRegular;
-  src: url("static/fonts/GortonDigitalRegular.otf");
+  src: url("../fonts/GortonDigitalRegular.otf");
 }
 
 html body {
