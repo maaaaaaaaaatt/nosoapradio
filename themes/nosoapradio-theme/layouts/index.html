@@ -12,13 +12,17 @@
         <div class="homepage-card">
             <a href="{{ .Permalink }}">
                <div class="card-title">{{ .Title }}<br>{{ .Params.dates }}</div>
-   
-               <img src="{{ with .Params.image1 }}{{ . }}{{ end }}"/>
+                
+               {{ with .Resources.GetMatch "cover.*" }}
+               <img src="{{ .RelPermalink }}"/>
+               {{ end }}
             </a>
    
             <audio class="card-audio" controls>
-               <source src="{{ with .Params.audio }}{{ . }}{{ end }}" type="audio/ogg">
+                {{ with .Resources.GetMatch "track.*" }}
+               <source src="{{ .Permalink }}" type="{{ .MediaType.Type }}" type="audio/ogg">
                Your browser does not support the audio element.
+               {{ end }}
             </audio>
    
         </div>

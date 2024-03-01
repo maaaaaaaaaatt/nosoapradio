@@ -6,10 +6,12 @@
     <!-- Project Title -->
      <div class="card-title">{{ .Title }}<br>{{ .Params.dates }}</div>
 
+     {{ with .Resources.GetMatch "track.*" }}
      <audio class="card-audio" controls>
-      <source src="{{ with .Params.audio }}{{ . }}{{ end }}" type="audio/ogg">
+      <source src="{{ .RelPermalink }}" type="{{ .MediaType.Type }}" type="audio/ogg">
       Your browser does not support the audio element.
    </audio>
+   {{ end }}
 
    <div class="project-copy">
       {{ .Content }}
@@ -18,9 +20,9 @@
   </div>
 
   <div class="project-img">
-     <img src="{{ with .Params.image1 }}{{ . }}{{ end }}">
-     <img src="{{ with .Params.image2 }}{{ . }}{{ end }}">
-     <img src="{{ with .Params.image3 }}{{ . }}{{ end }}">
+   {{ with .Resources.GetMatch "cover.*" }}
+     <img src="{{ .RelPermalink }}">
+     {{ end }}
   </div>
 
   {{ end }}
