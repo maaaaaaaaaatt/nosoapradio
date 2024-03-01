@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on NO SOAP, RADIO</title>
+    <link>http://localhost:1313/nosoapradio/</link>
+    <description>Recent content in Home on NO SOAP, RADIO</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 29 Feb 2024 20:03:29 -0500</lastBuildDate>
+    <atom:link href="http://localhost:1313/nosoapradio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ralph Records 10th Anniversary Radio Special</title>
+      <link>http://localhost:1313/nosoapradio/projects/ralphrecords/</link>
+      <pubDate>Thu, 29 Feb 2024 20:03:29 -0500</pubDate>
+      <guid>http://localhost:1313/nosoapradio/projects/ralphrecords/</guid>
+      <description>In February, 1982, Ralph Records contacted Mr. Penn Jillette, a nationally known entertainer and announcer, to see if he was interested in Ralph&amp;rsquo;s 10th Anniversary Radio Special. The format of the special, as specified in Mr. Jillette&amp;rsquo;s contract, was unusual, but the salary was sufficient, so Mr. Jillette agreed.&#xA;At 8:00 AM on Monday, March 1, Mr. Jillette entered room 312 of the Bentley Motor Inn at 465 Grove Street (directly across the street from the Ralph Headquarters) in San Francisco.</description>
+    </item>
+    <item>
+      <title>Don Rickles - Hello Dummy!</title>
+      <link>http://localhost:1313/nosoapradio/projects/hellodummy/</link>
+      <pubDate>Thu, 29 Feb 2024 19:56:26 -0500</pubDate>
+      <guid>http://localhost:1313/nosoapradio/projects/hellodummy/</guid>
+      <description>Hello Dummy! is a comedy album released by American comedian Don Rickles. It was recorded at the Sahara Hotel and Casino in Las Vegas, Nevada, and released in 1968. It peaked at No. 54 on the Billboard Top LPs music chart.&#xA;In a retrospective review, Jason Ankeny of AllMusic rated Hello Dummy! explained that Rickles &amp;ldquo;steadfastly remains a true equal-opportunity offender, spitting out insults with the speed and force of a rivet gun and without regard to gender, race, creed, or sexuality&amp;rdquo; and that &amp;ldquo;Hello Dummy!</description>
+    </item>
+    <item>
+      <title>CONTACT &amp; CORRESPONDENCE</title>
+      <link>http://localhost:1313/nosoapradio/submissions/</link>
+      <pubDate>Thu, 29 Feb 2024 14:46:04 -0500</pubDate>
+      <guid>http://localhost:1313/nosoapradio/submissions/</guid>
+      <description>For any inquiries, submissions, questions, correspondence, or messages, please emailstudio@no-soap.net.&#xA;OPEN CALL, SPRING 2024 No Soap Radio invites artists to submit work to our inaugural group exhibition to be held April 1 - May 15, 2024.&#xA;We are seeking work that challenges conventions of sound art, and investigates how the medium of broadcast can become activated through creative experimentation. While we’re open to any and all types of audio, we’re primarily interested in work that adopts and adapts AM radio as a format, and uses its particular intricacies (low fidelity, mono, etc.</description>
+    </item>
+    <item>
+      <title>INFORMATION DESK</title>
+      <link>http://localhost:1313/nosoapradio/info/</link>
+      <pubDate>Thu, 29 Feb 2024 14:46:04 -0500</pubDate>
+      <guid>http://localhost:1313/nosoapradio/info/</guid>
+      <description>No Soap Radio is a custom built, modular, and portable radio station designed to be installed in an art space, and either operated in person, or set to transmit automatically. Inspired by what Radio Artist Tetsuo Kogawa calls “narrowcasting”, No Soap Radio claims a part of the underutilized AM spectrum for conceptual, experimental, and radical sound art. By broadcasting to a niche audience on a format mostly abandoned by commercial stations, No Soap Radio is a form of performance art, and stands in contrast to corporate or community stations - because the goal is not to attract advertisers or provide news, entertainment, and information, but, instead, to create a venue for unexpected and experiential work in a non-traditional space.</description>
+    </item>
+    <item>
+      <title>The Best of Marcel Marceao</title>
+      <link>http://localhost:1313/nosoapradio/projects/marcel/</link>
+      <pubDate>Thu, 29 Feb 2024 14:46:04 -0500</pubDate>
+      <guid>http://localhost:1313/nosoapradio/projects/marcel/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet justo id neque luctus convallis. Proin tristique interdum libero, ac laoreet dolor malesuada et. Sed ornare tristique laoreet. Morbi vel tellus eget elit placerat mollis. Nulla quis augue at orci fermentum porttitor sit amet et tortor. Phasellus vel est nec nisl efficitur euismod a vel neque. Vestibulum vel felis commodo, ultricies felis ut, lacinia orci. Nunc feugiat lobortis ante, faucibus euismod augue suscipit non.</description>
+    </item>
+    <item>
+      <title>William Major: Pedals and Preachers</title>
+      <link>http://localhost:1313/nosoapradio/projects/will/</link>
+      <pubDate>Thu, 29 Feb 2024 14:46:04 -0500</pubDate>
+      <guid>http://localhost:1313/nosoapradio/projects/will/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sit amet justo id neque luctus convallis. Proin tristique interdum libero, ac laoreet dolor malesuada et. Sed ornare tristique laoreet. Morbi vel tellus eget elit placerat mollis. Nulla quis augue at orci fermentum porttitor sit amet et tortor. Phasellus vel est nec nisl efficitur euismod a vel neque. Vestibulum vel felis commodo, ultricies felis ut, lacinia orci. Nunc feugiat lobortis ante, faucibus euismod augue suscipit non.</description>
+    </item>
+  </channel>
+</rss>
