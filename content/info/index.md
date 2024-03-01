@@ -2,8 +2,6 @@
 title: 'INFORMATION DESK'
 date: 2024-02-29T14:46:04-05:00
 slug: "info"
-image1: "/img/studio2.jpg"
-audio: "/posts/audio/e11oblique.mp3"
 ---
 
 No Soap Radio is a custom built, modular, and portable radio station designed to be

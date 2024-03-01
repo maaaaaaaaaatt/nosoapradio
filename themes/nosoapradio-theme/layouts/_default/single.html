@@ -23,6 +23,9 @@
    {{ with .Resources.GetMatch "cover.*" }}
      <img src="{{ .RelPermalink }}">
      {{ end }}
+     {{ with .Resources.GetMatch "cover2.*" }}
+     <img src="{{ .RelPermalink }}">
+     {{ end }}
   </div>
 
   {{ end }}

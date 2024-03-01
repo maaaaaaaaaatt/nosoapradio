@@ -2,8 +2,6 @@
 title: 'CONTACT & CORRESPONDENCE'
 date: 2024-02-29T14:46:04-05:00
 slug: "submissions"
-image1: "/img/qsl1.jpg"
-image2: "/img/qsl2.jpg"
 ---
 
 For any inquiries, submissions, questions, correspondence, or messages, please email[studio@no-soap.net](mailto:studio@no-soap.net).
