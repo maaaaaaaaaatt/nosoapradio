@@ -6,8 +6,8 @@ slug: "ralphrecords"
 status: live
 
 tags: ""
-image1: "/projects/img/ralph1.png"
-audio: "/projects/audio/01 - Day One.mp3"
+image1: "projects/img/ralph1.png"
+audio: "projects/audio/01 - Day One.mp3"
 
 ---
 

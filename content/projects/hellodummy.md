@@ -6,8 +6,8 @@ slug: "hellodummy"
 status: live
 
 tags: ""
-image1: "/projects/img/hellodummy.png"
-audio: "/projects/audio/hellodummy1.mp3"
+image1: "projects/img/hellodummy.png"
+audio: "projects/audio/hellodummy1.mp3"
 
 ---
 
