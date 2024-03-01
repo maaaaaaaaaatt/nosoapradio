@@ -11,7 +11,7 @@
 
         <div class="homepage-card">
             <a href="{{ .Permalink }}">
-               <div class="card-title">{{ .Title }}<br>{{ .Params.dates }}</div>
+               <div class="card-title">{{ .Title }}<br>{{ .Params.run }}</div>
                 
                {{ with .Resources.GetMatch "cover.*" }}
                <img src="{{ .RelPermalink }}"/>

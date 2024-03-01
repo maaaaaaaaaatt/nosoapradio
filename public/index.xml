@@ -6,8 +6,15 @@
     <description>Recent content in Home on NO SOAP, RADIO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 29 Feb 2024 20:03:29 -0500</lastBuildDate>
+    <lastBuildDate>Fri, 01 Mar 2024 09:30:40 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/nosoapradio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Radio Taiso</title>
+      <link>http://localhost:1313/nosoapradio/projects/radiotaiso/</link>
+      <pubDate>Fri, 01 Mar 2024 09:30:40 -0500</pubDate>
+      <guid>http://localhost:1313/nosoapradio/projects/radiotaiso/</guid>
+      <description>Radio calisthenics (ラジオ体操, rajio taisō, literally, &amp;ldquo;radio exercises&amp;rdquo;) are warm-up calisthenics performed to music and guidance from radio broadcasts. Originating from the United States, they are popular in Japan and parts of China, North Korea and Taiwan.&#xA;In Japan, radio calisthenics are broadcast to music on public NHK radio and television early in the morning, and is a rare example of a sponsored program in the NHK (the sponsor being the Japan Post Insurance Co.</description>
+    </item>
     <item>
       <title>Ralph Records 10th Anniversary Radio Special</title>
       <link>http://localhost:1313/nosoapradio/projects/ralphrecords/</link>
