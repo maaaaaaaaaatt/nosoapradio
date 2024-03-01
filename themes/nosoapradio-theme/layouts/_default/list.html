@@ -1,8 +1,18 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+
+<div class="archive-table">
   {{ .Content }}
   {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
-  {{ end }}
+  <table>
+
+     <tr>
+        <td><a href="{{ .RelPermalink }}">{{ .Params.artist }}</a></td>
+        <td><a href="{{ .RelPermalink }}">{{ .Params.title }}</a></td>
+        <td><a href="{{ .RelPermalink }}">{{ .Params.run }}</a></td>
+     </tr>
+     {{ end }}
+     
+  </table>
+</div>
+
 {{ end }}

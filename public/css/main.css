@@ -196,8 +196,9 @@ a:visited {
 }
 
 .archive-table table {
-  padding: 10px;
+  padding: 0px;
   width: 100%;
+  border-collapse: collapse;
   text-transform: uppercase;
 }
 
@@ -225,8 +226,8 @@ td:last-child {
   text-align: center;
   margin-bottom: 1%;
   width: 100%;
-  position: sticky;
-  bottom: 0;
+  position: fixed;
+  bottom: 1px;
 }
 
 /* Mobile Views */
