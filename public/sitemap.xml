@@ -2,35 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://maaaaaaaaaatt.github.io/nosoapradio/projects/</loc>
+    <loc>http://localhost:1313/projects/</loc>
     <lastmod>2024-03-01T09:30:40-05:00</lastmod>
   </url><url>
-    <loc>https://maaaaaaaaaatt.github.io/nosoapradio/projects/radiotaiso/</loc>
+    <loc>http://localhost:1313/projects/radiotaiso/</loc>
     <lastmod>2024-03-01T09:30:40-05:00</lastmod>
   </url><url>
-    <loc>https://maaaaaaaaaatt.github.io/nosoapradio/projects/ralphrecords/</loc>
+    <loc>http://localhost:1313/projects/ralphrecords/</loc>
     <lastmod>2024-02-29T20:03:29-05:00</lastmod>
   </url><url>
-    <loc>https://maaaaaaaaaatt.github.io/nosoapradio/projects/hellodummy/</loc>
+    <loc>http://localhost:1313/projects/hellodummy/</loc>
     <lastmod>2024-02-29T19:56:26-05:00</lastmod>
   </url><url>
-    <loc>https://maaaaaaaaaatt.github.io/nosoapradio/submissions/</loc>
+    <loc>http://localhost:1313/submissions/</loc>
     <lastmod>2024-02-29T14:46:04-05:00</lastmod>
   </url><url>
-    <loc>https://maaaaaaaaaatt.github.io/nosoapradio/info/</loc>
+    <loc>http://localhost:1313/info/</loc>
     <lastmod>2024-02-29T14:46:04-05:00</lastmod>
   </url><url>
-    <loc>https://maaaaaaaaaatt.github.io/nosoapradio/projects/marcel/</loc>
+    <loc>http://localhost:1313/projects/marcel/</loc>
     <lastmod>2024-02-29T14:46:04-05:00</lastmod>
   </url><url>
-    <loc>https://maaaaaaaaaatt.github.io/nosoapradio/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2023-01-01T08:30:00-07:00</lastmod>
   </url><url>
-    <loc>https://maaaaaaaaaatt.github.io/nosoapradio/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2023-01-01T08:00:00-07:00</lastmod>
   </url><url>
-    <loc>https://maaaaaaaaaatt.github.io/nosoapradio/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://maaaaaaaaaatt.github.io/nosoapradio/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url>
 </urlset>
