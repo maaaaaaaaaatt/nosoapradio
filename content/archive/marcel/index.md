@@ -4,7 +4,7 @@ artist: Marcel Marceao
 date: 2024-02-29T14:46:04-05:00
 run: 04-01-2024 to 04-31-2024
 slug: "marcel"
-status: live
+status: archived
 tags: ""
 image1: "projects/img/marcel.gif"
 audio: "projects/audio/e11oblique.mp3"
