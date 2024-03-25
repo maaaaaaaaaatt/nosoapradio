@@ -15,7 +15,17 @@
 
       <script src="/js/main.js"></script>
 
-
+<script src="/themes/nosoapradio-theme/static/js/icecast-metadata-player-1.17.2.main.min.js"></script>
+<script>
+    const onMetadata = (metadata) => {
+      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
+    };
+    const player = 
+      new IcecastMetadataPlayer(
+        "https://dsmrad.io/stream/isics-all",
+        { onMetadata }
+      );
+  </script>
 </head>
 <body>
   <header>

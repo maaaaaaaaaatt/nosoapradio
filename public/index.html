@@ -16,7 +16,16 @@
 
       <script src="/js/main.js"></script>
 
-
+<script src="js/icecast-metadata-player-1.17.2.main.min.js"></script>
+<script>
+    const onMetadata = (metadata) => {
+      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
+    };
+    const player = new IcecastMetadataPlayer("https://stream.no-soap.net/stream", {
+  onMetadata: (metadata) => {console.log(metadata)},
+  ...options
+})
+  </script>
 </head>
 <body>
   <header>
@@ -140,29 +149,6 @@
             <audio class="card-audio" controls>
                 
                <source src="http://localhost:1313/archive/hellodummy/track.mp3" type="audio/mpeg" type="audio/ogg">
-               Your browser does not support the audio element.
-               
-            </audio>
-   
-        </div>
-
-
-        
-
-        
-
-        <div class="homepage-card">
-            <a href="http://localhost:1313/archive/marcel/">
-               <div class="card-title">Marcel Marceao - The Best of Marcel Marceao<br>04-01-2024 to 04-31-2024</div>
-                
-               
-               <img src="/archive/marcel/cover.gif"/>
-               
-            </a>
-   
-            <audio class="card-audio" controls>
-                
-               <source src="http://localhost:1313/archive/marcel/track.mp3" type="audio/mpeg" type="audio/ogg">
                Your browser does not support the audio element.
                
             </audio>

@@ -6,3 +6,13 @@
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
+<script src="js/icecast-metadata-player-1.17.2.main.min.js"></script>
+<script>
+    const onMetadata = (metadata) => {
+      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
+    };
+    const player = new IcecastMetadataPlayer("https://stream.no-soap.net/stream", {
+  onMetadata: (metadata) => {console.log(metadata)},
+  ...options
+})
+  </script>
