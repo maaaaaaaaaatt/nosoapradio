@@ -4,11 +4,13 @@ artist: Don Rickles
 date: 2024-02-29T19:56:26-05:00
 run: "03-01-2024 to 03-31-2024"
 slug: "hellodummy"
-status: live
+status: test
 
 tags: ""
 image1: ""
 audio: ""
+
+draft: true
 
 ---
 

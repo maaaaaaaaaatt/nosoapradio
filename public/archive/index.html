@@ -15,16 +15,15 @@
 
       <script src="/js/main.js"></script>
 
-<script src="/themes/nosoapradio-theme/static/js/icecast-metadata-player-1.17.2.main.min.js"></script>
+<script src="js/icecast-metadata-player-1.17.2.main.min.js"></script>
 <script>
     const onMetadata = (metadata) => {
       document.getElementById("metadata").innerHTML = metadata.StreamTitle;
     };
-    const player = 
-      new IcecastMetadataPlayer(
-        "https://dsmrad.io/stream/isics-all",
-        { onMetadata }
-      );
+    const player = new IcecastMetadataPlayer("https://stream.no-soap.net/stream", {
+  onMetadata: (metadata) => {console.log(metadata)},
+  ...options
+})
   </script>
 </head>
 <body>
@@ -65,41 +64,33 @@
   <table>
 
      <tr>
-        <td><a href="/archive/jonathan-winters/">Jonathan Winters</a></td>
-        <td><a href="/archive/jonathan-winters/">Humor Seen Through the Eyes of</a></td>
-        <td><a href="/archive/jonathan-winters/">03-01-2024 to 03-31-2024</a></td>
+        <td><a href="/archive/urusoneto/">Wladimir Schall&#39;</a></td>
+        <td><a href="/archive/urusoneto/">&#34;ウ​ル​ソ​ネ​ー​ト (Urusone​̄​to)&#34;</a></td>
+        <td><a href="/archive/urusoneto/">04-01-2024 to 05-31-2024</a></td>
      </tr>
      
   <table>
 
      <tr>
-        <td><a href="/archive/radiotaiso/">日本放送協会</a></td>
-        <td><a href="/archive/radiotaiso/">Radio Taiso</a></td>
-        <td><a href="/archive/radiotaiso/">03-01-2024 to 03-31-2024</a></td>
+        <td><a href="/archive/strange-skills/">Choi Joonyong/Devin DiSanto</a></td>
+        <td><a href="/archive/strange-skills/">&#34;Strange Skills&#34;</a></td>
+        <td><a href="/archive/strange-skills/">04-01-2024 to 05-31-2024</a></td>
      </tr>
      
   <table>
 
      <tr>
-        <td><a href="/archive/ralphrecords/">Ralph Records</a></td>
-        <td><a href="/archive/ralphrecords/">10th Anniversary Radio Special</a></td>
-        <td><a href="/archive/ralphrecords/">03-01-2024 to 03-31-2024</a></td>
+        <td><a href="/archive/bot-box-boxes/">Taku Unami</a></td>
+        <td><a href="/archive/bot-box-boxes/">&#34;bot box boxes&#34;</a></td>
+        <td><a href="/archive/bot-box-boxes/">04-01-2024 to 05-31-2024</a></td>
      </tr>
      
   <table>
 
      <tr>
-        <td><a href="/archive/hellodummy/">Don Rickles</a></td>
-        <td><a href="/archive/hellodummy/">Hello Dummy!</a></td>
-        <td><a href="/archive/hellodummy/">03-01-2024 to 03-31-2024</a></td>
-     </tr>
-     
-  <table>
-
-     <tr>
-        <td><a href="/archive/marcel/">Marcel Marceao</a></td>
-        <td><a href="/archive/marcel/">The Best of Marcel Marceao</a></td>
-        <td><a href="/archive/marcel/">04-01-2024 to 04-31-2024</a></td>
+        <td><a href="/archive/music-for-the-loud-air-conditioner/">Steve Kado</a></td>
+        <td><a href="/archive/music-for-the-loud-air-conditioner/">&#34;Music For The Loud Air Conditioner&#34;</a></td>
+        <td><a href="/archive/music-for-the-loud-air-conditioner/">04-01-2024 to 05-31-2024</a></td>
      </tr>
      
      

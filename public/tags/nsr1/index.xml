@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on NO SOAP, RADIO</title>
-    <link>http://localhost:1313/</link>
-    <description>Recent content in Home on NO SOAP, RADIO</description>
+    <title>NSR1 on NO SOAP, RADIO</title>
+    <link>http://localhost:1313/tags/nsr1/</link>
+    <description>Recent content in NSR1 on NO SOAP, RADIO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Mar 2024 21:35:10 -0400</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/nsr1/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&#34;ウ​ル​ソ​ネ​ー​ト (Urusone​̄​to)&#34;</title>
       <link>http://localhost:1313/archive/urusoneto/</link>
@@ -35,20 +35,6 @@
       <pubDate>Wed, 27 Mar 2024 21:16:36 -0400</pubDate>
       <guid>http://localhost:1313/archive/music-for-the-loud-air-conditioner/</guid>
       <description>Throughout May, 2020 the air conditioner outside my studio window in Austin, Texas went nuts. It was so loud that it was audible from the street, almost 200 meters away. Normally, my studio windows looked out onto a hectare of woods with birds and plants etc. Now everything was just the air conditioner.&#xA;There was no way to work without the air conditioner (the daytime heat would reach as high as 39 degrees Celsius), so I had to find a way to work with the air conditioner.</description>
-    </item>
-    <item>
-      <title>CONTACT &amp; CORRESPONDENCE</title>
-      <link>http://localhost:1313/submissions/</link>
-      <pubDate>Thu, 29 Feb 2024 14:46:04 -0500</pubDate>
-      <guid>http://localhost:1313/submissions/</guid>
-      <description>For any inquiries, submissions, questions, correspondence, or messages, please emailstudio@no-soap.net.&#xA;OPEN CALL, SPRING 2024 No Soap Radio invites artists to submit work to our inaugural group exhibition to be held April 1 - May 15, 2024.&#xA;We are seeking work that challenges conventions of sound art, and investigates how the medium of broadcast can become activated through creative experimentation. While we’re open to any and all types of audio, we’re primarily interested in work that adopts and adapts AM radio as a format, and uses its particular intricacies (low fidelity, mono, etc.</description>
-    </item>
-    <item>
-      <title>INFORMATION DESK</title>
-      <link>http://localhost:1313/info/</link>
-      <pubDate>Thu, 29 Feb 2024 14:46:04 -0500</pubDate>
-      <guid>http://localhost:1313/info/</guid>
-      <description>No Soap Radio is a custom built, modular, and portable radio station designed to be installed in an art space, and either operated in person, or set to transmit automatically. Inspired by what Radio Artist Tetsuo Kogawa calls “narrowcasting”, No Soap Radio claims a part of the underutilized AM spectrum for conceptual, experimental, and radical sound art. By broadcasting to a niche audience on a format mostly abandoned by commercial stations, No Soap Radio is a form of performance art, and stands in contrast to corporate or community stations - because the goal is not to attract advertisers or provide news, entertainment, and information, but, instead, to create a venue for unexpected and experiential work in a non-traditional space.</description>
     </item>
   </channel>
 </rss>
