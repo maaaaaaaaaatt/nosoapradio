@@ -1,6 +1,6 @@
 ---
 title: '"ウ​ル​ソ​ネ​ー​ト (Urusone​̄​to)"'
-artist: Wladimir Schall'
+artist: Wladimir Schall
 date: 2024-03-27T21:35:10-04:00
 run: "04-01-2024 to 05-31-2024"
 slug: "urusoneto"
