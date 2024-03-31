@@ -6,8 +6,15 @@
     <description>Recent content in Home on NO SOAP, RADIO</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 27 Mar 2024 21:35:10 -0400</lastBuildDate>
+    <lastBuildDate>Sun, 31 Mar 2024 17:53:53 -0400</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Spring 2024</title>
+      <link>http://localhost:1313/exhibitions/spring-2024/</link>
+      <pubDate>Sun, 31 Mar 2024 17:53:53 -0400</pubDate>
+      <guid>http://localhost:1313/exhibitions/spring-2024/</guid>
+      <description>Featured Artists: Erich Netherton, Toby Kaufmann-Buhler, Stephanie Sutton, Steve Kado, Taku Unami, and Wladimir Schall&#xA;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu metus sit amet velit interdum varius. Phasellus eget sapien consequat, fringilla ante vitae, facilisis erat. Proin iaculis auctor tortor, molestie ullamcorper lorem aliquam ut. Sed pharetra pellentesque porttitor. Maecenas in magna aliquam, ornare nunc ut, volutpat diam. Nulla congue suscipit ligula, eget venenatis odio interdum eget.</description>
+    </item>
     <item>
       <title>&#34;Marylou Was a Bookkeeper&#34;</title>
       <link>http://localhost:1313/archive/mary-lou/</link>

@@ -4,7 +4,7 @@
   <div class="project-info">
 
     <!-- Project Title -->
-     <div class="card-title">{{ .Params.artist }} - {{ .Title }}<br>{{ .Params.dates }}</div>
+     <div class="card-title">{{ .Params.artist }} - {{ .Title }}<br>{{ .Params.run }}</div>
 
      {{ with .Resources.GetMatch "track.*" }}
      <audio class="card-audio" controls>

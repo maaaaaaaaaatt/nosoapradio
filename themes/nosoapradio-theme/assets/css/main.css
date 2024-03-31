@@ -188,6 +188,64 @@ a:visited {
   width: 100%;
 }
 
+/* Exhibition Pages */
+
+.exhibition-container {
+  width: 100%;
+  height: fit-content;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.exhibition-info {
+  width: 98%;
+  height: auto;
+  border: 1px solid black;
+  position: relative;
+  margin: 3% 0 3% 1%;
+}
+
+.exhibition-img {
+  width: auto;
+  text-align: center;
+  position: relative;
+}
+
+.exhibition-img img {
+  width: 100%;
+}
+
+/* Archive */
+
+.exhibition-schedule {
+  width: 98%;
+  margin: 1%;
+}
+
+.exhibition-schedule table {
+  padding: 0px;
+  width: 100%;
+  border-collapse: collapse;
+  text-transform: uppercase;
+}
+
+tr {
+  outline: solid;
+}
+
+td {
+  padding: 10px;
+  width: 34%;
+}
+
+td:nth-child(2) {
+  text-align: center;
+}
+
+td:last-child {
+  text-align: right;
+}
+
 /* Archive */
 
 .archive-table {

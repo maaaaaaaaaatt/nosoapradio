@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<div class="archive-table">
+  {{ .Content }}
+  {{ range .Pages }}
+  <table>
+
+     <tr>
+        <td><a href="{{ .RelPermalink }}">{{ .Params.title }}</a></td>
+        <td><a href="{{ .RelPermalink }}">{{ .Params.run }}</a></td>
+     </tr>
+     {{ end }}
+     
+  </table>
+</div>
+
+{{ end }}
