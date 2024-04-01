@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/archive/cove/</loc>
+    <lastmod>2024-03-31T18:41:12-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/archive/</loc>
+    <lastmod>2024-03-31T18:41:12-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/nsr1/</loc>
+    <lastmod>2024-03-31T18:41:12-04:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-03-31T18:41:12-04:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/exhibition/</loc>
     <lastmod>2024-03-31T17:53:53-04:00</lastmod>
   </url><url>
@@ -9,9 +21,6 @@
     <lastmod>2024-03-31T17:53:53-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/exhibitions/spring-2024/</loc>
-    <lastmod>2024-03-31T17:53:53-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-03-31T17:53:53-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/archive/mary-lou/</loc>
@@ -22,15 +31,6 @@
   </url><url>
     <loc>http://localhost:1313/archive/urusoneto/</loc>
     <lastmod>2024-03-27T21:35:10-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/archive/</loc>
-    <lastmod>2024-03-27T21:35:10-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/nsr1/</loc>
-    <lastmod>2024-03-27T21:35:10-04:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/archive/strange-skills/</loc>
-    <lastmod>2024-03-27T21:17:10-04:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/archive/bot-box-boxes/</loc>
     <lastmod>2024-03-27T21:17:02-04:00</lastmod>

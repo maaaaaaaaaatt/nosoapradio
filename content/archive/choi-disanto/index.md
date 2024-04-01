@@ -27,3 +27,7 @@ inside center photo by Jung Yeon Cho
 design by Yuko Zama
 
 produced by Jon Abbey
+
+Choi Joonyong was born in 1977, and he lives in Seoul, South Korea. Noise and improvisation artist. In 1996 he co-founded the noise duo Astronoise, and in the early 2000s the label Balloon & Needle, both alongside Hong Chulki.
+
+Devin DiSanto is an New York-based artist and composer currently focusing on labor-oriented approaches to performance. This work revolves primarily around functional uses of common/everyday objects in both solo and group situations, emphasizing the presence and impact of incidental sound.

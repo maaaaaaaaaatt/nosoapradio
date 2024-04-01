@@ -6,7 +6,7 @@ slug: "submissions"
 
 For any inquiries, submissions, questions, correspondence, or messages, please email[studio@no-soap.net](mailto:studio@no-soap.net).
  
-
+<!-->
 ## OPEN CALL, SPRING 2024
 
 No Soap Radio invites artists to submit work to our inaugural group exhibition to be held April 1 - May 15, 2024.
