@@ -1,7 +1,7 @@
 @font-face {
   font-family: GortonRegular;
   src: local('GortonDigitalRegular'),
-  url('fonts/GortonDigitalRegular.otf') format("opentype");
+  url('/fonts/GortonDigitalRegular.otf') format("opentype");
 }
 
 html body {
@@ -17,7 +17,7 @@ html body {
 
 body {
   background-color: ivory;
-  font-family: 'GortonDigitalRegular', monospace;
+  font-family: 'GortonRegular', monospace;
 }
 
 /* Globals */
@@ -188,6 +188,64 @@ a:visited {
   width: 100%;
 }
 
+/* Exhibition Pages */
+
+.exhibition-container {
+  width: 100%;
+  height: fit-content;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.exhibition-info {
+  width: 98%;
+  height: auto;
+  border: 1px solid black;
+  position: relative;
+  margin: 3% 0 3% 1%;
+}
+
+.exhibition-img {
+  width: auto;
+  text-align: center;
+  position: relative;
+}
+
+.exhibition-img img {
+  width: 100%;
+}
+
+/* Archive */
+
+.exhibition-schedule {
+  width: 98%;
+  margin: 1%;
+}
+
+.exhibition-schedule table {
+  padding: 0px;
+  width: 100%;
+  border-collapse: collapse;
+  text-transform: uppercase;
+}
+
+tr {
+  outline: solid;
+}
+
+td {
+  padding: 10px;
+  width: 34%;
+}
+
+td:nth-child(2) {
+  text-align: center;
+}
+
+td:last-child {
+  text-align: right;
+}
+
 /* Archive */
 
 .archive-table {
@@ -196,8 +254,9 @@ a:visited {
 }
 
 .archive-table table {
-  padding: 10px;
+  padding: 0px;
   width: 100%;
+  border-collapse: collapse;
   text-transform: uppercase;
 }
 
@@ -225,6 +284,8 @@ td:last-child {
   text-align: center;
   margin-bottom: 1%;
   width: 100%;
+  position: fixed;
+  bottom: 1px;
 }
 
 /* Mobile Views */
@@ -251,79 +312,6 @@ td:last-child {
      display: block;
      padding: 2% 2%;
      width: 94%;
-  }
-
-  .project-container {
-     width: 100vw;
-  }
-
-  .project-info {
-     width: 96%;
-     margin: 3% 1% 3% 1%;
-  }
-
-  .project-img {
-     width: 96%;
-     margin: 3% 1% 3% 1%;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  .menu {
-     font-size: 8pt;
-  }
-}
-
-
-.blinking {
-  animation: 2s blink ease infinite;
-  
-}
-
-@keyframes blink {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@-moz-keyframes blink {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes blink {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@-ms-keyframes blink {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-@-o-keyframes blink {
-  from, to {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-} width: 94%;
   }
 
   .project-container {
