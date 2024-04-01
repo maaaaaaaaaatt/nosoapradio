@@ -9,3 +9,6 @@ installed in an art space, and either operated in person, or set to transmit aut
 
 
 We host regular exhibitions of experimental works of sound, new media, and transmission arts. To submit work, ask questions, or otherwise get in touch, please email [studio@no-soap.net](mailto:studio@no-soap.net).
+
+
+No Soap Radio is supported in part by Idea Capital Atlanta and the University of Tennessee School of Design.
