@@ -17,13 +17,27 @@
 
 <script src="js/icecast-metadata-player-1.17.2.main.min.js"></script>
 <script>
-    const onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
-    };
-    const player = new IcecastMetadataPlayer("https://stream.no-soap.net/stream", {
-  onMetadata: (metadata) => {console.log(metadata)},
-  ...options
-})
+    async function fetchIcecastMetadata() {
+            try {
+                const response = await fetch('http://stream.no-soap.net/status-json.xsl');
+                const data = await response.json();
+                const source = data.icestats.source;
+
+                
+                const nowPlaying = Array.isArray(source) ? source[0].title : source.title;
+
+                document.getElementById('metadata').textContent = nowPlaying;
+            } catch (error) {
+                console.error('Error fetching Icecast metadata:', error);
+                document.getElementById('metadata').textContent = 'Error loading metadata';
+            }
+        }
+
+        
+        setInterval(fetchIcecastMetadata, 10000);
+
+        
+        fetchIcecastMetadata();
   </script>
 </head>
 <body>
@@ -47,7 +61,7 @@
  </div>
 
  <div class="menu">
-    <marquee scrollamount="5">NOW PLAYING: <span><a href="/exhibitions/field-of-action">NO SOAP RADIO #1 - FIELD OF ACTION/a></span></marquee>
+    <marquee scrollamount="5">NOW PLAYING: <span id="metadata"></span></marquee>
     
     <audio class="header-audio" controls>
        <source src="https://stream.no-soap.net:443/stream" type="audio/mpeg">

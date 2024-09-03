@@ -8,11 +8,43 @@
 {{ partialCached "head/js.html" . }}
 <script src="js/icecast-metadata-player-1.17.2.main.min.js"></script>
 <script>
-    const onMetadata = (metadata) => {
-      document.getElementById("metadata").innerHTML = metadata.StreamTitle;
-    };
-    const player = new IcecastMetadataPlayer("https://stream.no-soap.net/stream", {
-  onMetadata: (metadata) => {console.log(metadata)},
-  ...options
-})
+    async function fetchIcecastMetadata() {
+    try {
+        const response = await fetch('https://stream.no-soap.net/status-json.xsl'); // Update this URL to your actual Icecast server
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log('Data:', data);
+
+        let nowPlaying = '';
+
+        // Check if the source is an array (multiple streams) or an object (single stream)
+        if (Array.isArray(data.icestats.source)) {
+            nowPlaying = data.icestats.source[0].title || 'No metadata available';
+        } else {
+            nowPlaying = data.icestats.source.title || 'No metadata available';
+        }
+
+        // Separate title and artist
+        let [songTitle, artistName] = nowPlaying.split(' - ');
+
+        // Add quotes around the song title
+        songTitle = `"${songTitle.trim()}"`;
+
+        // Display both song title and artist name
+        document.getElementById('metadata').textContent = `${songTitle} - ${artistName.trim()}`;
+    } catch (error) {
+        console.error('Error fetching Icecast metadata:', error);
+        document.getElementById('metadata').textContent = 'Error loading metadata';
+    }
+}
+
+// Fetch metadata every 10 seconds
+setInterval(fetchIcecastMetadata, 10000);
+
+// Initial fetch
+fetchIcecastMetadata();
+
   </script>

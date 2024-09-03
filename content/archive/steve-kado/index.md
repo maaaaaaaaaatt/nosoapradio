@@ -4,7 +4,7 @@ artist: Steve Kado
 date: 2024-03-27T21:16:36-04:00
 run: "04-01-2024 to 05-31-2024"
 slug: "music-for-the-loud-air-conditioner"
-status: live
+status: archived
 
 tags: "NSR1"
 

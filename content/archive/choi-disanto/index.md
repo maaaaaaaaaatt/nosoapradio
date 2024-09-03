@@ -4,7 +4,7 @@ artist: Choi Joonyong/Devin DiSanto
 date: 2024-03-27T21:17:10-04:00
 run: "04-01-2024 to 05-31-2024"
 slug: "strange-skills"
-status: live
+status: archived
 
 tags: "NSR1"
 

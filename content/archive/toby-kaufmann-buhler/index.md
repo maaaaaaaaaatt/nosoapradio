@@ -4,7 +4,7 @@ artist: Toby Kaufmann-Buhler
 date: 2024-03-31T18:41:12-04:00
 run: "04-01-2024 to 05-31-2024"
 slug: "cove"
-status: live
+status: archived
 
 tags: "NSR1"
 ---

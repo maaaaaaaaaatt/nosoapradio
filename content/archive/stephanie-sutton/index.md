@@ -4,7 +4,7 @@ artist: Stephanie Sutton
 date: 2024-03-27T21:35:10-04:00
 run: "04-01-2024 to 05-31-2024"
 slug: "mary-lou"
-status: live
+status: archived
 
 tags: "NSR1"
 ---
