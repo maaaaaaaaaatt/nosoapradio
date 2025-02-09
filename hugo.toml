@@ -1,7 +1,0 @@
-baseURL = 'https://no-soap.net/'
-languageCode = 'en-us'
-title = 'NO SOAP, RADIO'
-subtitle = 'Here, There, and Everywhere'
-email = 'studio@no-soap.net'
-theme = 'nosoapradio-theme'
-favicon = true
