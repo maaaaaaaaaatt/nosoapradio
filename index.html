@@ -28,6 +28,10 @@
             height: 50%;
         }
 
+        a {
+            color: black;
+        }
+
         #light {
             height: 8px;
             width: 8px;
@@ -69,7 +73,6 @@
 
             const metadataDiv = document.getElementById('metadata');
             const lightDiv = document.getElementById('light');
-            const headerAudioElements = document.querySelectorAll('.header-audio');
 
             if (nowPlaying) {
                 let [songTitle, artistName] = nowPlaying.split(' - ');
@@ -78,25 +81,24 @@
                 artistName = artistName ? artistName.trim() : '';
 
                 metadataDiv.textContent = artistName ? `${songTitle} - ${artistName}` : songTitle;
-                metadataDiv.style.display = 'block';
-                lightDiv.style.display = 'block';
-                headerAudioElements.forEach(el => el.style.display = 'block'); // Show all header-audio elements
+                metadataDiv.style.display = 'block'; // Show div when metadata is available
+                lightDiv.style.display = 'block'; // Show light div when metadata is available
             } else {
-                metadataDiv.style.display = 'none';
-                lightDiv.style.display = 'none';
-                headerAudioElements.forEach(el => el.style.display = 'none'); // Hide all header-audio elements
+                metadataDiv.style.display = 'none'; // Hide metadata div if no metadata
+                lightDiv.style.display = 'none'; // Hide light div if no metadata
             }
         } catch (error) {
             console.error('Error fetching Icecast metadata:', error);
-            document.getElementById('metadata').style.display = 'none';
-            document.getElementById('light').style.display = 'none';
-            document.querySelectorAll('.header-audio').forEach(el => el.style.display = 'none');
+            document.getElementById('metadata').style.display = 'none'; // Hide metadata div on error
+            document.getElementById('light').style.display = 'none'; // Hide light div on error
         }
     }
 
     setInterval(fetchIcecastMetadata, 10000);
     fetchIcecastMetadata();
 </script>
+
+
 
 
 
@@ -117,7 +119,7 @@
             <source src="https://stream.no-soap.net:443/stream" type="audio/mpeg">
             Your browser does not support the audio tag.
         </audio>
-        <br>
+        <br><br>
 
         FOR FIELD TESTING ONLY:<br><br>
         <img style="width: 100%;" src="chart.png">
