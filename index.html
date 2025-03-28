@@ -37,7 +37,6 @@
             width: 8px;
             background-color: red;
             border-radius: 50%;
-            display: inline-block;
             margin: 0px 7px 3px 0px;
         }
 
@@ -58,12 +57,13 @@
             }
 
             .header-audio::-webkit-media-controls-panel {
-            background-color: lightblue;
-            border: 1px solid black;
-        }
+                background-color: lightblue;
+                border: 1px solid black;
+            }
         }
     </style>
 
+    <!-- old metadata script 
     <script>
         async function fetchIcecastMetadata() {
             try {
@@ -108,9 +108,46 @@
 
         setInterval(fetchIcecastMetadata, 10000);
         fetchIcecastMetadata();
+
     </script>
+    -->
 
 
+
+    <script>
+        async function fetchNowPlaying() {
+            const url = 'https://stream.no-soap.net/api/nowplaying/no_soap_radio';
+        
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+        
+                const nowPlayingElement = document.getElementById('now-playing');
+                const lightElement = document.getElementById('light');
+                
+                if (data && data.now_playing && data.now_playing.song.title) {
+                    nowPlayingElement.innerHTML = `
+                        <strong>${data.now_playing.song.title}</strong> 
+                        by ${data.now_playing.song.artist}
+                    `;
+                    nowPlayingElement.style.display = 'block';  // Show #now-playing
+                    lightElement.style.display = 'inline-block';        // Show #light
+                } else {
+                    nowPlayingElement.style.display = 'none';    // Hide #now-playing
+                    lightElement.style.display = 'none';         // Hide #light
+                }
+            } catch (error) {
+                console.error('Error fetching now-playing data:', error);
+                nowPlayingElement.style.display = 'none';        // Hide #now-playing
+                lightElement.style.display = 'none';             // Hide #light
+            }
+        }
+        
+        // Update every 30 seconds
+        fetchNowPlaying();
+        setInterval(fetchNowPlaying, 30000);
+        </script>
+        
 
 
 
@@ -123,9 +160,9 @@
 
         <br>
         NO SOAP, RADIO<br>
-        <div id="light">CURRENTLY </div>BROADCASTING ON: A.M. 1660 kHz<br>
+        <div id="light"></div>CURRENTLY BROADCASTING ON: A.M. 1660 kHz<br>
         NEAR: KNOXVILLE, TN, U.S.A.<br>
-        <div id="metadata">NOW PLAYING:
+        <div id="metadata">NOW PLAYING: <div id="now-playing"></div>
         </div>
         <audio class="header-audio" controls>
             <source src="https://stream.no-soap.net/listen/no_soap_radio/radio.mp3" type="audio/mpeg">
@@ -141,7 +178,8 @@
         <br>
         <a href="/reports/">Reports</a>
         <br><br>
-        <em>No Soap Radio is the broadcasting division of <a href="https://goodboyprojects.net">GOOD BOY PROJECTS</a></em>
+        <em>No Soap Radio is the broadcasting division of <a href="https://goodboyprojects.net">GOOD BOY
+                PROJECTS</a></em>
         <br><br>
 
     </div>
