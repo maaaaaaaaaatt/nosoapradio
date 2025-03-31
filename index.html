@@ -73,6 +73,13 @@
             border: 1px solid black;
         }
 
+        #cover-art {
+            width: 75%;
+            left: 25%;
+            border: 2px black solid;
+            margin-left: 12.5%;
+        }
+
         @media only screen and (max-width: 600px) {
 
             .container {
@@ -146,9 +153,10 @@
 
                 const nowPlayingElement = document.getElementById('now-playing');
                 const playlistElement = document.getElementById('playlist');
+                const coverArtElement = document.getElementById('cover-art');
 
                 if (data && data.now_playing && data.now_playing.song.title) {
-                    nowPlayingElement.innerHTML = `
+                    nowPlayingElement.innerHTML = `NOW PLAYING:
                         <em>${data.now_playing.song.title}</em> 
                         by <strong>${data.now_playing.song.artist.toUpperCase()}</strong>
                     `;
@@ -156,19 +164,29 @@
 
                     // Display playlist name if available
                     if (data.now_playing.playlist) {
-                        playlistElement.innerHTML = `LIVE NOW: <strong>${data.now_playing.playlist}</strong>`;
+                        playlistElement.innerHTML = `LIVE: <strong>${data.now_playing.playlist}</strong>`;
                         playlistElement.style.display = 'block';
                     } else {
                         playlistElement.style.display = 'none';
                     }
+
+                    // Set cover art if available
+                    if (data.now_playing.song.art) {
+                        coverArtElement.src = data.now_playing.song.art;
+                        coverArtElement.style.display = 'block';
+                    } else {
+                        coverArtElement.style.display = 'none';
+                    }
                 } else {
                     nowPlayingElement.style.display = 'none';
                     playlistElement.style.display = 'none';
+                    coverArtElement.style.display = 'none';
                 }
             } catch (error) {
                 console.error('Error fetching now-playing data:', error);
                 nowPlayingElement.style.display = 'none';
                 playlistElement.style.display = 'none';
+                coverArtElement.style.display = 'none';
             }
         }
 
@@ -176,7 +194,6 @@
         fetchNowPlaying();
         setInterval(fetchNowPlaying, 30000);
     </script>
-
 
 </head>
 
@@ -191,7 +208,7 @@
         NO SOAP, RADIO<br>
         CURRENTLY BROADCASTING ON: A.M. 1660 kHz<br>
         IN or AROUND: KNOXVILLE, TN, U.S.A.<br><br>
-        
+
         <div id="playlist"></div>
 
         <div id="now-playing"></div>
@@ -203,9 +220,15 @@
         </audio>
         <br><br>
 
-        FOR FIELD TESTING ONLY:<br><br>
+
+
+        <!--  test chart, still think it's cool
+                  FOR FIELD TESTING ONLY:<br><br>
         <img style="width: 75%;" src="chart.png">
-        <br><br>
+        -->
+
+        <img id="cover-art" src="" alt="Cover Art">
+        <br>
         studio (at) no-soap.net<br>
         <em>"HERE, THERE, AND EVERYWHERE"</em>
         <br>
