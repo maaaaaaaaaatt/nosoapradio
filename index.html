@@ -28,19 +28,47 @@
         }
 
         body {
-            font-family: Gorton, Berkley, 'Courier New', Courier, monospace, monospace;
-            background-color: #fffff0;
+            font-family: Times New Roman, Gorton, Berkley, 'Courier New', Courier, monospace, monospace;
+            font-size: 12pt;
+            background-color: whitesmoke;
             background-image: url();
             background-size: repeat;
+            margin: 0;
+            padding: 20px;
+            filter: url(#distort);
+        }
+
+        .grid-wrapper {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 90%;
+            margin: 0 5%;
+        }
+
+        .static-column {
+            position: sticky;
+            top: 20px;
+            align-self: start;
+        }
+
+        .scrollable-column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
         }
 
         .container {
             border: 2px solid black;
-            margin: 2% 25%;
             text-align: center;
-            height: 50%;
-            background-color: #fffff0;
+            background-color: whitesmoke;
             position: relative;
+            padding: 10px 20px;
+        }
+
+        .full-width {
+            max-width: 90%;
+            margin: 20px 5%;
         }
 
         a {
@@ -54,7 +82,7 @@
             border-radius: 50%;
             position: absolute;
             top: 10px;
-            right: 10px;
+            left: 10px;
         }
 
         .header-audio {
@@ -63,166 +91,160 @@
         }
 
         .header-audio::-webkit-media-controls-panel {
-            background-color: #fffff0;
-            border: 1px solid black;
+            background-color: none;
+            border: 2px solid black;
         }
 
         #cover-art {
-            width: 50%;
-            left: 25%;
+            width: 75%;
+            left: 20%;
             border: 2px black solid;
-            margin-left: 25%;
+            margin-left: 12%;
+        }
+
+        .featured {
+            width: 100%;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: 2px solid black;
+        }
+
+        #schedule {
+            text-align: left;
+        }
+
+        .schedule-item {
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+
+        .schedule-time {
+            white-space: nowrap;
+        }
+
+        .schedule-dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted black;
+            margin: 0 5px;
+            min-width: 20px;
+        }
+
+        .schedule-name {
+            white-space: nowrap;
+        }
+
+        .loading {
+            text-align: center;
         }
 
         @media only screen and (max-width: 600px) {
+            .grid-wrapper {
+                grid-template-columns: 1fr;
+                margin: 0 10px;
+            }
+
+            .static-column {
+                position: relative;
+                top: 0;
+            }
 
             .container {
-                margin: 2% 10%;
                 font-size: 9pt;
             }
 
             .header-audio::-webkit-media-controls-panel {
-                background-color: lightblue;
+                background-color: beige;
                 border: 1px solid black;
             }
         }
     </style>
 
-    <!-- old metadata script 
-    <script>
-        async function fetchIcecastMetadata() {
-            try {
-                const response = await fetch('https://stream.no-soap.net/status-json.xsl');
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-
-                const data = await response.json();
-                console.log('Data:', data);
-
-                let nowPlaying = '';
-
-                if (Array.isArray(data.icestats.source)) {
-                    nowPlaying = data.icestats.source[0]?.title?.trim() || '';
-                } else {
-                    nowPlaying = data.icestats.source?.title?.trim() || '';
-                }
-
-                const metadataDiv = document.getElementById('metadata');
-                const lightDiv = document.getElementById('light');
-
-                if (nowPlaying) {
-                    let [songTitle, artistName] = nowPlaying.split(' - ');
-
-                    songTitle = songTitle ? `"${songTitle.trim()}"` : '';
-                    artistName = artistName ? artistName.trim() : '';
-
-                    metadataDiv.textContent = artistName ? `${songTitle} - ${artistName}` : songTitle;
-                    metadataDiv.style.display = 'block'; // Show div when metadata is available
-                    lightDiv.style.display = 'block'; // Show light div when metadata is available
-                } else {
-                    metadataDiv.style.display = 'none'; // Hide metadata div if no metadata
-                    lightDiv.style.display = 'none'; // Hide light div if no metadata
-                }
-            } catch (error) {
-                console.error('Error fetching Icecast metadata:', error);
-                document.getElementById('metadata').style.display = 'none'; // Hide metadata div on error
-                document.getElementById('light').style.display = 'none'; // Hide light div on error
-            }
-        }
-
-        setInterval(fetchIcecastMetadata, 10000);
-        fetchIcecastMetadata();
-
-    </script>
-    -->
-
-    <script>
-        async function fetchNowPlaying() {
-            const url = 'https://stream.no-soap.net/api/nowplaying/no_soap_radio';
-
-            try {
-                const response = await fetch(url);
-                const data = await response.json();
-
-                const nowPlayingElement = document.getElementById('now-playing');
-                const playlistElement = document.getElementById('playlist');
-                const coverArtElement = document.getElementById('cover-art');
-
-                if (data && data.now_playing && data.now_playing.song.title) {
-                    nowPlayingElement.innerHTML = `NOW PLAYING:
-                        <em>${data.now_playing.song.title}</em> 
-                        by <strong>${data.now_playing.song.artist.toUpperCase()}</strong>
-                    `;
-                    nowPlayingElement.style.display = 'block';
-
-                    // Display playlist name if available
-                    if (data.now_playing.playlist) {
-                        playlistElement.innerHTML = `LIVE: <strong>${data.now_playing.playlist}</strong>`;
-                        playlistElement.style.display = 'block';
-                    } else {
-                        playlistElement.style.display = 'none';
-                    }
-
-                    // Set cover art if available
-                    if (data.now_playing.song.art) {
-                        coverArtElement.src = data.now_playing.song.art;
-                        coverArtElement.style.display = 'block';
-                    } else {
-                        coverArtElement.style.display = 'none';
-                    }
-                } else {
-                    nowPlayingElement.style.display = 'none';
-                    playlistElement.style.display = 'none';
-                    coverArtElement.style.display = 'none';
-                }
-            } catch (error) {
-                console.error('Error fetching now-playing data:', error);
-                nowPlayingElement.style.display = 'none';
-                playlistElement.style.display = 'none';
-                coverArtElement.style.display = 'none';
-            }
-        }
-
-        // Update every 30 seconds
-        fetchNowPlaying();
-        setInterval(fetchNowPlaying, 30000);
-    </script>
+    <script src="/script.js"></script>
 
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="grid-wrapper">
+
+        <div class="static-column">
+            <div class="container">
+                <div style="font-family: 'Times New Roman', Times, serif;">
+
+                    <span style="font-size: 20pt; font-style: italic;"><b>"NO SOAP, RADIO"</b></span><br>
+                    CURRENTLY BROADCASTING ON: A.M. 1660 kHz<br>
+                    IN or AROUND: SURFSIDE BEACH, SC, U.S.A.
+
+                </div>
+                <br>
+                <div id="light"></div>
+
+                <div id="playlist"></div>
+
+                <div id="now-playing"></div>
+
+                <audio class="header-audio" controls>
+                    <source src="https://stream.no-soap.net/listen/no_soap_radio/radio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+                <br><br>
+
+                <img id="cover-art" src="" alt="Cover Art">
+                <br>
+                studio (at) no-soap.net<br>
+                <em>"HERE, THERE, AND EVERYWHERE"</em>
+                <br>
+                <a href="/reports/">Reports</a>
+                <br><br>
+                <em>NO SOAP, RADIO is the broadcasting division of <a href="https://goodboyprojects.net">GOOD BOY
+                        PROJECTS</a></em>
+            </div>
+        </div>
 
 
-        <br>
-        <div id="light"></div>
 
-        NO SOAP, RADIO<br>
-        CURRENTLY BROADCASTING ON: A.M. 1660 kHz<br>
-        IN or AROUND: SURFSIDE BEACH, SC, U.S.A.<br><br>
+        <div class="scrollable-column">
 
-        <div id="playlist"></div>
+            <div class="container">
+                FEATURED PROGRAMMING:<br>
+                <img class="featured" src="images/2025-10-26_InfiniteStartup-05.png">
+                <em>"INFINITE START UP"</em><br>
+                Monday at 9 a.m.<br>
+                Beginning 11-01-2025<br>
+                <p style="text-align: left;">Systems, in one sense, are devices that take input and produce an output. A
+                    system can be thought to operate on the input to produce the output. The output is related to the
+                    input by a certain relationship known as the system response. The system response usually can be
+                    modeled with a mathematical relationship between the system input and the system output.</p>
+            </div>
 
-        <div id="now-playing"></div>
+            <div class="container">
+                TODAY'S SCHEDULE<br>
+                ALL TIMES EST<br><br>
+                <div id="schedule">
+                    <p class="loading">LOADING...</p>
+                </div><br>
+                "Standard Rotation" unless otherwise stated
+            </div>
 
+            <!--
+            <div class="container">
+                ARCHIVE OF PROGRAMS & EXHIBITIONS<br><br>
+            </div>
+            -->
 
-        <audio class="header-audio" controls>
-            <source src="https://stream.no-soap.net/listen/no_soap_radio/radio.mp3" type="audio/mpeg">
-            Your browser does not support the audio tag.
-        </audio>
-        <br><br>
+            <div class="container">
+                FOR FIELD TESTING ONLY:<br><br>
+                <img style="width: 100%;" src="images/chart.png"><br><br>
+                PLEASE SUBMIT TEST RESULTS TO STUDIO (AT) NO-SOAP.NET FOR VERIFICATION
+            </div>
+        </div>
 
+    </div>
 
-
-        <!--  test chart, still think it's cool
-                  FOR FIELD TESTING ONLY:<br><br>
-        <img style="width: 75%;" src="chart.png">
-        -->
-
-        <img id="cover-art" src="" alt="Cover Art">
-        <br>
+    <!-- Commenting Out full-width box
+    <div class="container full-width">
         studio (at) no-soap.net<br>
         <em>"HERE, THERE, AND EVERYWHERE"</em>
         <br>
@@ -230,12 +252,20 @@
         <br><br>
         <em>NO SOAP, RADIO is the broadcasting division of <a href="https://goodboyprojects.net">GOOD BOY
                 PROJECTS</a></em>
-        <br><br>
-
     </div>
+    -->
 
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="0" height="0">
+        <defs>
+            <filter id="distort">
+                <feTurbulence baseFrequency="1 1" numOctaves="1" />
+                <feDisplacementMap in="SourceGraphic" scale="1.5" />
+            </filter>
+        </defs>
+    </svg>
 
 </body>
+
 
 
 </html>
