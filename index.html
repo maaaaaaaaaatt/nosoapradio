@@ -27,10 +27,15 @@
             src: url(fonts/TX-02-Trial-Regular.otf);
         }
 
+        @font-face {
+            font-family: Routed;
+            src: url(fonts/routed-gothic.ttf);
+        }
+
         body {
-            font-family: Times New Roman, Gorton, Berkley, 'Courier New', Courier, monospace, monospace;
+            font-family: Routed, Times New Roman, Gorton, Berkley, 'Courier New', Courier, monospace, monospace;
             font-size: 12pt;
-            background-color: whitesmoke;
+            background-color: ivory;
             background-image: url();
             background-size: repeat;
             margin: 0;
@@ -61,7 +66,6 @@
         .container {
             border: 2px solid black;
             text-align: center;
-            background-color: whitesmoke;
             position: relative;
             padding: 10px 20px;
         }
@@ -78,7 +82,7 @@
         #light {
             height: 10px;
             width: 10px;
-            background-color: red;
+            background-color: #ba160c;
             border-radius: 50%;
             position: absolute;
             top: 10px;
@@ -139,6 +143,30 @@
             text-align: center;
         }
 
+        .synoptic-map {
+            width: 100%;
+            height: auto;
+            display: block;
+            border: 2px solid black;
+            margin: 10px 0;
+        }
+
+        .refresh-btn {
+            padding: 8px 20px;
+            background: black;
+            color: ivory;
+            border: 2px solid black;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 10pt;
+            margin: 10px 0;
+        }
+
+        .refresh-btn:hover {
+            background: ivory;
+            color: black;
+        }
+
         @media only screen and (max-width: 600px) {
             .grid-wrapper {
                 grid-template-columns: 1fr;
@@ -155,7 +183,7 @@
             }
 
             .header-audio::-webkit-media-controls-panel {
-                background-color: beige;
+                background-color: ivory;
                 border: 1px solid black;
             }
         }
@@ -171,7 +199,7 @@
 
         <div class="static-column">
             <div class="container">
-                <div style="font-family: 'Times New Roman', Times, serif;">
+                <div>
 
                     <span style="font-size: 20pt; font-style: italic;"><b>"NO SOAP, RADIO"</b></span><br>
                     CURRENTLY BROADCASTING ON: A.M. 1660 kHz<br>
@@ -260,6 +288,15 @@
                 "Standard Rotation" unless otherwise noted
             </div>
 
+            <!-- hiding solar conditions (for now)
+            <div class="container">
+                CURRENT SOLAR CONDITIONS:<br>
+                <img id="synopticMap" class="synoptic-map" src="https://services.swpc.noaa.gov/images/synoptic-map.jpg"
+                    alt="NOAA Solar Synoptic Map">
+                <span id="mapTimestamp">As of: Loading...</span><br><br>
+            </div>
+            -->
+
             <!--
             <div class="container">
                 ARCHIVE OF PROGRAMS & EXHIBITIONS<br><br>
@@ -267,11 +304,20 @@
             -->
 
             <div class="container">
+                MONTHLY REPORTS<br><br>
+                <div class="reportlist">
+                    <span><a href="/reports/01-2026.pdf">#01 - January 2026</a></span>
+         
+                </div>
+            </div>
+
+            <div class="container">
                 FOR FIELD TESTING ONLY:<br><br>
                 <img style="width: 100%;" src="images/chart.png"><br><br>
-                PLEASE SUBMIT TEST RESULTS TO STUDIO (AT) NO-SOAP.NET FOR VERIFICATION
+                PLEASE SUBMIT TEST RESULTS TO<br>STUDIO (AT) NO-SOAP.NET FOR VERIFICATION
             </div>
         </div>
+
 
     </div>
 
